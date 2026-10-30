@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: stops-on-a-dirty-tree
+expected_outcome: |
+  The repository has an uncommitted change in CLAUDE.md. The cleanup does not start: it stops, explains that the pending change must be committed first or the cleanup cancelled, and asks. No commit is made, nothing is stashed, the pending change is still there, and no other file changes.
+context:
+  scaffold_script: make-repo.sh

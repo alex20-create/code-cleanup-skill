@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: orphan-built-from-text
+expected_outcome: |
+  The branch stopped writing two classes literally in index.html. The cleanup removes .navbadge, which nothing produces any more, and keeps .navchallenges, which nav.js still builds at run time as "nav" + id, explaining why it stays. nav.js and menu.js are untouched, npm test passes, and the work stays on feat/nav-redesign.
+context:
+  scaffold_script: make-repo.sh
